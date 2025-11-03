@@ -4,6 +4,8 @@ import com.desafio.devjunior.demo.enums.Prioridade;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity @Table(name = "todos")
 @Getter
 @Setter
@@ -29,4 +31,6 @@ public class Todo {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Prioridade prioridade;
+
+    LocalDateTime dataHour;
 }
